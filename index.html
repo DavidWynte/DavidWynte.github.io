@@ -71,6 +71,80 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-图床使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/01/11/%E5%9B%BE%E5%BA%8A%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time class="dt-published" datetime="2023-01-11T12:43:44.000Z" itemprop="datePublished">2023-01-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/01/11/%E5%9B%BE%E5%BA%8A%E4%BD%BF%E7%94%A8/">图床使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Typora设置图片自动上传</p>
+<p>Typora固然好用，MarkDown也固然好用，但图片该怎么处理？总不能自己一张张的上传，然后在复制网络连接吧，也不是不可以🤔<br>下面介绍两种方式实现自动上传。</p>
+<h2 id="1-使用-PicGo-Core"><a href="#1-使用-PicGo-Core" class="headerlink" title="1.使用 PicGo-Core"></a>1.使用 PicGo-Core</h2><p>下载 PicGo-Core</p>
+<p><img src="/../images/%E5%9B%BE%E5%BA%8A%E4%BD%BF%E7%94%A8/b61924b127f5ca9049435d33303bb3f8.png"></p>
+<p>依次点击 文件 -&gt; 偏好设置 -&gt; 图像 来到下图所示界面：</p>
+<ul>
+<li>点击①位置选择 PicGo-Gore(command line)选项后，点击②位置的下载或更新，在弹出的界面中选择下载。</li>
+</ul>
+<p>选择sm.ms作为图床并配置 token</p>
+<blockquote>
+<p>免费版存储容量 5GB，每分钟限制上传20张，每小时限制上传100张，每天限制上传200张，每周限制上传500张，每月限制上传1000张，单张图片最大5M。该图床建立于2015年，目前免费用户无法使用香港节点因此速度比较慢（白嫖党没这么多事）。</p>
+</blockquote>
+<ul>
+<li><p>打开官网 <a target="_blank" rel="noopener" href="https://sm.ms/%EF%BC%8C%E6%B3%A8%E5%86%8C%E5%90%8E%E7%99%BB%E5%BD%95%E3%80%82">https://sm.ms/，注册后登录。</a></p>
+</li>
+<li><p>打开该网址 <a target="_blank" rel="noopener" href="https://sm.ms/home/apitoken%EF%BC%8C%E7%94%9F%E6%88%90">https://sm.ms/home/apitoken，生成</a> token。</p>
+</li>
+</ul>
+<p><img src="/../images/%E5%9B%BE%E5%BA%8A%E4%BD%BF%E7%94%A8/77eec4a4e2299ad761ce46b66c846a80.png"></p>
+<p>最后点击③位置配置 token，放置如下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;picBed&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;uploader&quot;</span>: <span class="string">&quot;smms&quot;</span>,</span><br><span class="line">    <span class="string">&quot;smms&quot;</span>: &#123;</span><br><span class="line">      <span class="string">&quot;token&quot;</span>: <span class="string">&quot;xxxxxxxxxxxxxxxxxxxxxx&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;picgoPlugins&quot;</span>: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>token 换成刚刚生成的 sm.ms 的token。</p>
+</blockquote>
+<ol>
+<li><p>按照步骤配置好后，点击验证图片上传选项，如果提示验证成功，那么恭喜，你毕业了🎊；</p>
+</li>
+<li><p>拖拽图片到 typora 实现自动上传并更改 url 的功能。</p>
+</li>
+</ol>
+<h2 id="2-使用-PicGo-软件"><a href="#2-使用-PicGo-软件" class="headerlink" title="2.使用 PicGo 软件"></a>2.使用 PicGo 软件</h2><p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/zhaoxiace/article/details/125152378">https://blog.csdn.net/zhaoxiace/article/details/125152378</a></p>
+<p>自己看吧</p>
+<p><img src="/../images/%E5%9B%BE%E5%BA%8A%E4%BD%BF%E7%94%A8/91b0bfdaa8ce4829a84214f2c88ca56e19363351.jpg" alt="91b0bfdaa8ce4829a84214f2c88ca56e19363351"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/01/11/%E5%9B%BE%E5%BA%8A%E4%BD%BF%E7%94%A8/" data-id="clcrp26ae00065cvqfeno7ajv" data-title="图床使用" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-MKD常用语言" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/01/10/MKD%E5%B8%B8%E7%94%A8%E8%AF%AD%E8%A8%80/" class="article-date">
@@ -98,7 +172,7 @@
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/143498187">Markdown语法全面详解</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1hJ411X75X/?spm_id_from=333.337.search-card.all.click&vd_source=2ed09acb1bd0fd6db7e28951016eec62">【使用教程】15分钟快速上手Markdown教程，绝对精品</a></p>
 <p>&#x2F;&#x2F;hexo clean &amp;&amp; hexo g &amp;&amp; hexo s<br>&#x2F;&#x2F;hexo d</p>
-<h1 id="一、文本"><a href="#一、文本" class="headerlink" title="一、文本"></a>一、文本</h1><h3 id="1-分级标题Ctrl-1-Ctrl-2…"><a href="#1-分级标题Ctrl-1-Ctrl-2…" class="headerlink" title="1.分级标题Ctrl+1;Ctrl+2…"></a>1.分级标题<span style='color:red;background:yellow;font-size:18px;font-family:hei'>Ctrl+1;Ctrl+2…</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#	一级</span><br><span class="line">##	二级</span><br><span class="line">###	三级</span><br></pre></td></tr></table></figure>
+<h2 id="一、文本"><a href="#一、文本" class="headerlink" title="一、文本"></a>一、文本</h2><h3 id="1-分级标题Ctrl-1-Ctrl-2…"><a href="#1-分级标题Ctrl-1-Ctrl-2…" class="headerlink" title="1.分级标题Ctrl+1;Ctrl+2…"></a>1.分级标题<span style='color:red;background:yellow;font-size:18px;font-family:hei'>Ctrl+1;Ctrl+2…</span></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#	一级</span><br><span class="line">##	二级</span><br><span class="line">###	三级</span><br></pre></td></tr></table></figure>
 
 <p>效果：</p>
 <h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><h3 id="2-分割线"><a href="#2-分割线" class="headerlink" title="2.分割线"></a>2.分割线</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">***</span><br><span class="line">___</span><br></pre></td></tr></table></figure>
@@ -194,11 +268,41 @@
 
 <p>效果：<br><a href=""></a><br><a target="_blank" rel="noopener" href="https://davidwynte.github.io/">DavidWynet的Hexo博客</a></p>
 <h3 id="4-表格Ctrl-T"><a href="#4-表格Ctrl-T" class="headerlink" title="4.表格Ctrl+T"></a>4.表格<span style='color:red;background:yellow;font-size:18px;font-family:hei'>Ctrl+T</span></h3><p><img src="/../images/MKD%E5%B8%B8%E7%94%A8%E8%AF%AD%E8%A8%80/%E8%A1%A8%E6%A0%BC.png" alt="插入表格"></p>
+<table>
+<thead>
+<tr>
+<th align="center">11</th>
+<th align="center">12</th>
+<th align="center">13</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">21</td>
+<td align="center">22</td>
+<td align="center">23</td>
+</tr>
+<tr>
+<td align="center">31</td>
+<td align="center">32</td>
+<td align="center">33</td>
+</tr>
+<tr>
+<td align="center">41</td>
+<td align="center">42</td>
+<td align="center">43</td>
+</tr>
+</tbody></table>
+<h3 id="5-注脚"><a href="#5-注脚" class="headerlink" title="5.注脚"></a>5.注脚</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MarkDown[^<span class="number">1</span>]可以方便的书写。</span><br><span class="line">[^<span class="number">1</span>]: MarkDown是一种可以使用普通文本编辑器编写的标记语言。</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意，注脚自动被移动到最后方。</strong></p>
+<p>效果：</p>
+<p>MarkDown<a href="MarkDown%E6%98%AF%E4%B8%80%E7%A7%8D%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E6%99%AE%E9%80%9A%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8%E7%BC%96%E5%86%99%E7%9A%84%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80%E3%80%82">^1</a>可以方便的书写。</p>
+<p>上面说的对！<a href="%E6%AC%B8%E5%98%BF~">^2</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/01/10/MKD%E5%B8%B8%E7%94%A8%E8%AF%AD%E8%A8%80/" data-id="clcrn28ti000120vq90bv7dlm" data-title="Markdown常用语言" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/01/10/MKD%E5%B8%B8%E7%94%A8%E8%AF%AD%E8%A8%80/" data-id="clcrp26a800015cvqgvzk0d2r" data-title="Markdown常用语言" class="article-share-link">Share</a>
       
       
       
@@ -239,7 +343,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/01/10/%E4%B8%80%E9%94%AE%E4%B8%89%E8%BF%9E%E5%90%8C%E6%AD%A5%E7%BD%91%E9%A1%B5/" data-id="clcrn28tn000420vq6yn63idd" data-title="一键三连同步网页" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/01/10/%E4%B8%80%E9%94%AE%E4%B8%89%E8%BF%9E%E5%90%8C%E6%AD%A5%E7%BD%91%E9%A1%B5/" data-id="clcrp26ac00045cvq5quhbisi" data-title="一键三连同步网页" class="article-share-link">Share</a>
       
       
       
@@ -277,7 +381,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/01/10/hexo-clean-hexo-g-hexo-d/" data-id="clcrn28to000520vqccvw3wwx" data-title="hexo clean hexo g hexo d" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/01/10/hexo-clean-hexo-g-hexo-d/" data-id="clcrp26ab00035cvq6q98ftme" data-title="hexo clean hexo g hexo d" class="article-share-link">Share</a>
       
       
       
@@ -315,7 +419,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/01/10/This-is-a-test/" data-id="clcrn28tl000220vq05qx23j5" data-title="This is a test." class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/01/10/This-is-a-test/" data-id="clcrp26ad00055cvq510jgksa" data-title="This is a test." class="article-share-link">Share</a>
       
       
       
@@ -353,7 +457,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/01/10/Hello/" data-id="clcrn28td000020vqdrcnft95" data-title="Hello" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/01/10/Hello/" data-id="clcrp26a300005cvq6gjucyoc" data-title="Hello" class="article-share-link">Share</a>
       
       
       
@@ -404,7 +508,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/01/10/hello-world/" data-id="clcrn28tm000320vq9bjt9usk" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/01/10/hello-world/" data-id="clcrp26aa00025cvq4q7o0qch" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -447,6 +551,10 @@
       <ul>
         
           <li>
+            <a href="/2023/01/11/%E5%9B%BE%E5%BA%8A%E4%BD%BF%E7%94%A8/">图床使用</a>
+          </li>
+        
+          <li>
             <a href="/2023/01/10/MKD%E5%B8%B8%E7%94%A8%E8%AF%AD%E8%A8%80/">Markdown常用语言</a>
           </li>
         
@@ -460,10 +568,6 @@
         
           <li>
             <a href="/2023/01/10/This-is-a-test/">This is a test.</a>
-          </li>
-        
-          <li>
-            <a href="/2023/01/10/Hello/">Hello</a>
           </li>
         
       </ul>
